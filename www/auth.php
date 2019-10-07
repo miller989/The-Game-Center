@@ -3,7 +3,7 @@ $servername = "localhost";  //replace your servername
 $username = "root";   //replace your username
 $password = "";        //replace your password
 $dbname = "tgcdb";    //replace your database name
-
+session_start();
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 //Check connection
@@ -15,13 +15,13 @@ else{
     if ( !isset($_POST['username'], $_POST['password']) ) {
         die ('Please fill both the username and password field!');
     }
-    if ($stmt = $conn->prepare('SELECT id, password FROM TgcUsers WHERE name = ?')) {
+    if ($stmt = $conn->prepare('SELECT id, password, permissions FROM TgcUsers WHERE name = ?')) {
         $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
         $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $password);
+        $stmt->bind_result($id, $password, $permissions);
         $stmt->fetch();
 
     if (password_verify($_POST['password'], $password)) {
@@ -30,7 +30,10 @@ else{
         $_SESSION['loggedin'] = TRUE;
         $_SESSION['name'] = $_POST['username'];
         $_SESSION['id'] = $id;
+        $_SESSION['permissions'] = $permissions;
         echo 'Welcome ' . $_SESSION['name'] . '!';
+        echo 'Permission ' . $_SESSION['permissions'];
+        header("Location: userlist.php");
     } else {
         echo 'Incorrect password!';
     }
