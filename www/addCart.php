@@ -10,27 +10,27 @@ if ( isset( $_SESSION['name'] ) ) {
 /** Check if cart in session **/
 if ( isset( $_SESSION['cart'] ) ) {
     /** If cart in session **/
-    $cart = $_session['cart'];
+    $cart = $_SESSION['cart'];
     $cartSize = count($cart);
     /** Check if cart has posted information**/
     if ( !isset($_POST['addCart']) ) {
-        die ('Nothing being posted');
         header("Location: cart.php?err=2000");
-    }
+    } else {
     $addCart = $_POST['addCart'];
-    $cartSize++;
-    $cart[$cartSize - 1] = $addCart;
-    header("Location: cart.php?err=2000");
-
+    $cart[$cartSize] = $addCart;
+    $_SESSION['cart'] = $cart;
+    header("Location: cart.php");
+    }
 } else {
     /** if cart is not in session **/
     /** Check if cart has posted information**/
-    if ( !isset($_POST['addCart']) ) {
-        die ('Nothing being posted');
+     if ( !isset($_POST['addCart']) ) {
         header("Location: cart.php?err=2000");
-    }
+     } else {
     //** Create cart with posted information **//
     $cart[0] = $_POST['addCart'];
+    $_SESSION['cart'] = $cart;
     header("Location: cart.php");
+     }
 }
 ?>
