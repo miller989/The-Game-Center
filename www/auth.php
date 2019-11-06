@@ -33,12 +33,12 @@ else{
         $_SESSION['permissions'] = $permissions;
         echo 'Welcome ' . $_SESSION['name'] . '!';
         echo 'Permission ' . $_SESSION['permissions'];
-        header("Location: userlist.php");
+        header("Location: index.php");
     } else {
-        echo 'Incorrect password!';
+        header("Location: login.php?err=1100");
     }
 } else {
-    echo 'Incorrect username!';
+header("Location: login.php?err=1100");
 }
 $stmt->close();
     }

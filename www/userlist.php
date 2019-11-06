@@ -1,5 +1,37 @@
 <?php
 session_start();
+if (isset ($_GET["err"])){
+    $err = $_GET["err"];
+    switch ($err){
+    case 1000:
+        $errhtml =  ' <div class="alert alert-danger alert-dismissible fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Error!</strong> You need to be <a href="login.html">logged in</a> to do that!
+  </div>';
+        break;
+    case 2000:
+        $errhtml =  ' <div class="alert alert-danger alert-dismissible fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Error!</strong> Nothing was posted! It\'s Dangerous to go alone!
+            </div>';
+        break;
+    case 1100:
+        $errhtml =  ' <div class="alert alert-danger alert-dismissible fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Error!</strong> Wrong username or password! Please try again.
+  </div>';
+        break;
+         case 100:
+        $errhtml =  ' <div class="alert alert-danger alert-dismissible fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Error!</strong> Database not connected!
+  </div>';
+    break;
+}
+
+}else{
+}
+echo $errhtml;
 if ( isset( $_SESSION['name'] ) ) {
     $name = $_SESSION['name'];
     $permissions = $_SESSION['permissions'];
@@ -29,11 +61,7 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
 ?>
-
-
-
 <?php
 echo 'Welcome ' . $name . "!" . $permissions;
 switch ($permissions){
