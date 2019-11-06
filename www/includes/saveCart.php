@@ -1,5 +1,17 @@
 <?php
 session_start();
+//** SQL housekeeping **//
+$servername = "localhost";  
+$username = "root";   
+$password = "";       
+$dbname = "tgcdb";    
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+//Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+    header(Location: ../index.php?err=100)
+}
 /** ensure user is logged in**/
 if ( isset( $_SESSION['name'] ) ) {
     $name = $_SESSION['name'];
