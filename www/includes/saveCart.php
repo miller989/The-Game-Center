@@ -9,7 +9,6 @@ $dbname = "tgcdb";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 //Check connection
 if (!$conn) {
-  //  die("Connection failed: " . mysqli_connect_error());
     header("Location: ../index.php?err=100");
 }
 /** ensure user is logged in**/
@@ -34,6 +33,6 @@ for($count = 0; $count < $cartSize; $count ++){
     echo $list_query;
     echo '<br>';
 }
-//header("Location: ../index.php?err=6000");
+
 
 ?>
