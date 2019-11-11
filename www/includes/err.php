@@ -20,6 +20,11 @@ function errcheck($err){
             <strong>Error!</strong> Nothing was posted! It\'s Dangerous to go alone!
             </div>';
         break;
+		case 2500:
+        $err =  ' <div class="alert alert-danger alert-dismissible fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Error!</strong> You cannot name your cart savedCart_* Try again without that!
+  </div>';
     case 1100:
         $err =  ' <div class="alert alert-danger alert-dismissible fade in">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -30,6 +35,12 @@ function errcheck($err){
         $err =  ' <div class="alert alert-danger alert-dismissible fade in">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <strong>Error!</strong> Database not connected!
+  </div>';
+    break;
+	         case 110:
+        $err =  ' <div class="alert alert-danger alert-dismissible fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Error!</strong> Database Query errors!
   </div>';
     break;
 }
