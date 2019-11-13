@@ -14,6 +14,12 @@ function errcheck($err){
     <strong>Error!</strong> You need to have something in your cart to be there! </br> There are many fun games to play!
   </div>';
         break;
+        case 1600:
+            $err =  ' <div class="alert alert-danger alert-dismissible fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Error!</strong> There is nothing in your cart! Unable to create invoice.
+  </div>';
+            break;
     case 2000:
         $err =  ' <div class="alert alert-danger alert-dismissible fade in">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

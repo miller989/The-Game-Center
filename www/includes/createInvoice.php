@@ -2,10 +2,10 @@
 session_start();
 $_SESSION['savedCart'] = savedCart;
 //** SQL housekeeping **//
-$servername = "localhost";  
-$username = "root";   
-$password = "";       
-$dbname = "tgcdb";    
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "tgcdb";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 //Check connection
@@ -23,19 +23,9 @@ if ( isset( $_SESSION['name'] ) ) {
 if ( isset( $_SESSION['cart'] ) ) {
 } else {
     /** if cart is not in session **/
-    header("Location: ../index.php?err=1500");
+    header("Location: ../index.php?err=1600");
 }
-/** setup sql query **/
-if ($savedCart = 'logout'){
-	$cartName = 'savedCart_' . date('Y-m-d H:i:s');
-	}else{
-	//pass name to function
-	if (savedCart = 'savedCart_'.*){
-		header("Location: ../index.php?err=2500");
-	} 
-	$cartName = $_SESSION['cartName'];
-}
-
+/** setup list_query for items purchased **/
 $cartSize = count($_SESSION['cart']);
 $cart = $_SESSION['cart'];
 for($count = 0; $count < $cartSize; $count ++){
@@ -43,16 +33,5 @@ for($count = 0; $count < $cartSize; $count ++){
     echo $list_query;
     echo '<br>';
 }
-
-if($stmt = $conn->prepare('INSERT INTO savedCart (uid, gid, name) VALUES (?, ?)'))
-{
-	$stmt->bind_param('sss', $_SESSION['userid'], $list_query, $cartName);
-	$stmt->execute();
-	$conn->close();
-	header('Location: ../index.php');
-	}else {
-	header('Location: ../index.php?err=110');
-}
-
 
 ?>
