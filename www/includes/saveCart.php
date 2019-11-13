@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['savedCart'] = savedCart;
+$finalHeader = '../index.php';
 //** SQL housekeeping **//
 $servername = "localhost";  
 $username = "root";   
@@ -28,9 +29,10 @@ if ( isset( $_SESSION['cart'] ) ) {
 /** setup sql query **/
 if ($savedCart = 'logout'){
 	$cartName = 'savedCart_' . date('Y-m-d H:i:s');
+	$finalHeader = 'Location: ../logout.php';
 	}else{
 	//pass name to function
-	if (savedCart = 'savedCart_'.*){
+	if ($savedCart = 'savedCart_'.'*'){
 		header("Location: ../index.php?err=2500");
 	} 
 	$cartName = $_SESSION['cartName'];
@@ -49,7 +51,7 @@ if($stmt = $conn->prepare('INSERT INTO savedCart (uid, gid, name) VALUES (?, ?)'
 	$stmt->bind_param('sss', $_SESSION['userid'], $list_query, $cartName);
 	$stmt->execute();
 	$conn->close();
-	header('Location: ../index.php');
+	header($finalHeader);
 	}else {
 	header('Location: ../index.php?err=110');
 }
