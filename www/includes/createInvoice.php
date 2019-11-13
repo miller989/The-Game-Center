@@ -33,5 +33,14 @@ for($count = 0; $count < $cartSize; $count ++){
     echo $list_query;
     echo '<br>';
 }
+/** Get Totals */
+if($stmt = $conn->prepare('SELECT name.name, name.price, SUM(name.price) AS totalCost where name.ID = ? from name;')) {
+    $stmt->execute();
+    $stmt->store_result();
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($name, $price, $totalCost);
+        $stmt->fetch();
+    }
 
+}
 ?>
