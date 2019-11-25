@@ -2,7 +2,7 @@
 $servername = "localhost";  //replace your servername
 $username = "root";   //replace your username
 $password = "";        //replace your password
-$dbname = "tgc";    //replace your database name
+$dbname = "tgcdb";    //replace your database name
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
