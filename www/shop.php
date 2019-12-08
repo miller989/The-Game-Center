@@ -69,21 +69,21 @@ include "includes/sidebar.php";
                 <div class="col-md-4 col-sm-6 center-responsive">
 
                         <div class="product">
-                            <a href="game.php">
+                            <a href="shop.php?err=9000">
                                 <img class="img-responsive" src="admin/products/1.jpg" alt="Product 1">
                             </a>
 
                             <div class="text">
 
                                 <h3>
-                                    <a href="game.php">
+                                    <a href="shop.php?err=9000">
                                         Grand Theft Auto V
                                     </a>
                                 </h3>
                                 <p class="price">$29.99</p>
                                 <p class="button">
                                     <a href="game.php" class="btn btn-default">View Details</a>
-                                    <a href="game.php" class="btn btn-primary">
+                                    <a href="shop.php?err=9000" class="btn btn-primary">
                                         <i class="fa fa-shopping-cart">
                                             Add To Cart
                                         </i>
@@ -95,7 +95,7 @@ include "includes/sidebar.php";
 
                     <div class="col-md-4 col-sm-6 center-responsive">
                         <div class="product">
-                            <a href="game.php">
+                            <a href="addCart.php">
                                 <img class="img-responsive" src="admin/products/2.jpg" alt="Product 1">
                             </a>
 
@@ -147,21 +147,21 @@ include "includes/sidebar.php";
 
                     <div class="col-md-4 col-sm-6 center-responsive">
                         <div class="product">
-                            <a href="game.php">
+                            <a href="shop.php?err=9000">
                                 <img class="img-responsive" src="admin/products/4.jpg" alt="Product 1">
                             </a>
 
                             <div class="text">
 
                                 <h3>
-                                    <a href="game.php">
+                                    <a href="shop.php?err=9000">
                                         DRAGON BALL FighterZ
                                     </a>
                                 </h3>
                                 <p class="price">$23.99</p>
                                 <p class="button">
                                     <a href="game.php" class="btn btn-default">View Details</a>
-                                    <a href="game.php" class="btn btn-primary">
+                                    <a href="shop.php?err=9000" class="btn btn-primary">
                                         <i class="fa fa-shopping-cart">
                                             Add To Cart
                                         </i>

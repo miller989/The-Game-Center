@@ -24,10 +24,10 @@ if (isset ($_GET["err"])){
         $("#ConfirmPassword").keyup(function(){
              if ($("#password").val() != $("#ConfirmPassword").val()) {
                  $("#msg").html("Password do not match").css("color","red");
-                 document.getElementById("btnSubmit").disabled = true;
+              //   document.getElementById("btnSubmit").disabled = true;
              }else{
                  $("#msg").html("Password matched").css("color","green");
-                 document.getElementById("btnSubmit").disabled = false;
+                // document.getElementById("btnSubmit").disabled = false;
             }
       });
 });
@@ -50,7 +50,7 @@ if (isset ($_GET["err"])){
 <div id="msg"></div>
 <input class="button" id=btnSubmit type="submit"  value="Register">
 </form>
-	</div>
+</div>
 </body>
 
 </html>

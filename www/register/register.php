@@ -31,7 +31,6 @@ if (!$conn) {
             if ($stmt = $conn->prepare('INSERT INTO TgcUsers (name, password) VALUES (?, ?)')) {
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 $stmt->bind_param('ss', $_POST['username'], $password);
-                //echo $stmt;
                 $stmt->execute();
                 echo 'You have successfully registered, you can now login!';
                 header("location: ../login.html");

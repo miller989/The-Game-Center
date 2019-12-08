@@ -43,7 +43,13 @@ function errcheck($err){
     <strong>Error!</strong> Database Query errors!
   </div>';
     break;
-}
+     case 9000:
+        $err =  ' <div class="alert alert-success alert-dismissible fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>success!</strong> GAME Grand Theft Auto V has been added to your cart!
+   </div>';
+   break;
+    }
 return $err;
 }
 ?>

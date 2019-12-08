@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>TGC</title>
-    
+
 <?php
     session_start();
     $r =4;
@@ -29,12 +29,11 @@
 ?>
 
 <?php include 'includes/top.php';?>
-    
 <?php
-    $test = $_SESSION['cart'];
-    $cartSize = count($test);
-    //echo $cartSize;
-    //echo '<br>';
+
+?>
+
+<?php
     for($count = 0; $count < $cartSize; $count ++){
         echo $test[$count];
         echo '<br>';
@@ -83,14 +82,14 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><img class="img-responsive" src="admin/products/5.jpg" alt="DeadedBoi"></td>
-                                        <td><a href="#">Dead by Daylight</a> </td>
+                                        <td><img class="img-responsive" src="admin/products/1.jpg" alt="DeadedBoi"></td>
+                                        <td><a href="#">Grand theft Auto V</a> </td>
                                         <td>
-                                            <input type="number" id="quantity" value="2" min="1" max="10">
+                                            <input type="number" id="quantity" value="1" min="1" max="10">
                                         </td>
-                                        <td>$12.99</td>
+                                        <td>$29.99</td>
                                         <td><input type="checkbox" id="delete" name="remove[]"></td>
-                                        <td>$25.98</td>
+                                        <td>$29.99</td>
                                     </tr>
                                 </tbody>
 
@@ -110,17 +109,17 @@
                                 <tfoot>
                                     <tr>
                                         <th colspan="5">Total</th>
-                                        <th colspan="2">$49.97</th> <!-- total pre checkout -->
+                                        <th colspan="2">$53.98</th> <!-- total pre checkout -->
                                     </tr>
                                 </tfoot>
                             </table>
-                            
+
                             <div class="form-inline pull-right">
                                <div class="form-group">
                                     <label> Discount Code: </label>
                                     <input type="text" name="code" class="form-control">
                                     <input type="submit" class="btn btn-primary" value="Apply" name="applyDiscount">
-                               
+
                                </div>
                            </div>
 
@@ -197,7 +196,7 @@
                             <tbody>
                                 <tr>
                                     <td>Order Sub-Total</td>
-                                    <th>$49.97</th>
+                                    <th>$53.98</th>
                                 </tr>
                                 <tr>
                                     <td>Tax</td>
@@ -205,11 +204,11 @@
                                 </tr>
                                 <tr class="total">
                                     <td>Total</td>
-                                    <th>49.97</th>
+                                    <th>53.98</th>
                                 </tr>
                             </tbody>
                         </table>
-                        
+
                     </div>
                 </div>
             </div>
