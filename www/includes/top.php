@@ -16,7 +16,7 @@ $page = $components[1];
                     <ul class="menu">
                         <li><a href="/register/index.php">Register</a></li>
                         <li><a href="<?php if ($sessionControl == 'Logout'){ echo 'logout.php';}else{echo 'login.php';} ?>"><?php echo $sessionControl;?></a></li>
-                        <li><a href="userlist.php">My Account</a></li>
+                        <li><a href="userlist.php"><?php echo $_SESSION['name']; ?></a></li>
                         <li><a href="cart.php">Cart</a></li>
                     </ul>
                 </div>
@@ -58,7 +58,7 @@ $page = $components[1];
                             <a href="shop.php">Shop</a>
                         </li>
                         <li class="<?php if ($page=="account.php") {echo "active"; } else  {echo "noactive";}?>">
-                            <a href="account.php">My Account</a>
+                            <a href="invoicelist.php">My Account</a>
                         </li>
                         <li class="<?php if ($page=="cart.php") {echo "active"; } else  {echo "noactive";}?>">
                             <a href="cart.php">Cart</a>
@@ -82,7 +82,7 @@ $page = $components[1];
                 </div>
                 <div class="collapse clearfix" id="search">
 
-                    <form method="get" action="results.php" class="navbar-form">
+                    <form method="get" action="game.php" class="navbar-form">
 
                         <div class="input-group">
 

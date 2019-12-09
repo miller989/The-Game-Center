@@ -9,23 +9,7 @@
         <ul class="nav-pills nav-stacked nav">
 
             <li class= "active">
-                <a href="#"><i class="fa fa-list"></i> My Orders</a>
-            </li>
-
-            <li>
-                <a href="#"><i class="fa fa-bolt"></i> Pay Offline</a>
-            </li>
-
-            <li>
-                <a href="#"><i class="fa fa-pencil"></i> Edit Account</a>
-            </li>
-
-            <li>
-                <a href="#"><i class="fa fa-user"></i> Change Password</a>
-            </li>
-
-            <li>
-                <a href="#"> <i class="fa fa-trash-o"></i> Delete Account</a>
+                <a href="invoicelist.php"><i class="fa fa-list"></i> My Orders</a>
             </li>
 
             <li>

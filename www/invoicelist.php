@@ -57,10 +57,10 @@ if ( isset( $_SESSION['name'] ) ) {
 
             <div class="col-md-3">
 
-                <?php 
-    
+                <?php
+
     include("includes/usersidebar.php");
-    
+
     ?>
 
             </div>
@@ -73,34 +73,44 @@ if ( isset( $_SESSION['name'] ) ) {
                             <tr>
                                 <th> ON: </th>
                                 <th> Due Amount: </th>
-                                <th> Invoice No: </th>
+                                <th> Invoice contents: </th>
                                 <th> Order Date:</th>
                                 <th> Status: </th>
-                                <th> Status: </th>
+                                <th>  </th>
                             </tr>
                         </thead>
 
                         <!-- instance  -->
                         <tbody>
                             <tr>
-                                <th> 1 </th>
-                                <td> 12.50 </td>
-                                <td> 33333 </td>
+                                <th> 101 </th>
+                                <td> 12.99 </td>
+                                <td> Dead by Daylight </td>
                                 <td> 12/8/2019 </td>
-                                <td> Status </td>
-                                <td><a href="#" class="btn btn-primary btn-sm"> Confirm</a> </td>
+                                <td> Paid </td>
+                                <td><a href="invoice101.php" class="btn btn-primary btn-sm"> View</a> </td>
                             </tr>
                         </tbody>
 
                         <!-- instance  -->
                         <tbody>
                             <tr>
-                                <th> 2 </th>
-                                <td> 13.50 </td>
-                                <td> 33222 </td>
-                                <td> 12/9/2019 </td>
-                                <td> Status </td>
-                                <td><a href="#" class="btn btn-primary btn-sm"> Confirm</a> </td>
+                                <th> 102 </th>
+                                <td> 92.88 </td>
+                                <td> Monster Hunter World </br> A Plague Tale </td>
+                                <td> 12/8/2019 </td>
+                                <td> Paid </td>
+                                <td><a href="invoice102.php" class="btn btn-primary btn-sm"> View</a> </td>
+                            </tr>
+<!-- instance  -->
+                        <tbody>
+                            <tr>
+                               <th> 103 </th>
+                               <td> 53.98 </td>
+                               <td> Grand theft Auto V </br> 	DRAGON BALL FighterZ </td>
+                               <td> <?php $date = date('m/d/Y', time()); echo $date; ?>  </td>
+                               <td> Paid </td>
+                               <td><a href="invoice103.php" class="btn btn-primary btn-sm"> View</a> </td>
                             </tr>
                         </tbody>
                     </table>

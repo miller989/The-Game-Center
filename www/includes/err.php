@@ -49,7 +49,15 @@ function errcheck($err){
     <strong>success!</strong> GAME Grand Theft Auto V has been added to your cart!
    </div>';
    break;
+
+    case 550:
+        $err =  ' <div class="alert alert-success alert-dismissible fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>success!</strong> INV: <a href="invoice103.php">103</a> Created! Thannk you for your purchase!
+   </div>';
+   break;
     }
+
 return $err;
 }
 ?>
